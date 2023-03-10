@@ -1,27 +1,63 @@
-body {
+* {
   margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
+:root {
+  --bg-orange: rgb(250, 146, 72);
+  --bg-gray: rgb(107, 107, 107);
+  --bg-btn: rgb(209, 209, 209);
+}
+
+body {
+  font-size: 18px;
+}
+
+.root-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.app-container {
+  width: 480px;
+  margin-top: 12%;
+}
+
+.calculator-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.calc-buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.calc-total {
+  display: flex;
+  color: white;
+  justify-content: flex-end;
+  background-color: var(--bg-gray);
+  padding: 1.3rem 0.4rem;
+}
+
+.calc-button {
+  cursor: pointer;
+  text-align: center;
+  width: 120px;
+  padding: 18px;
+  border: 1px ridge rgb(164, 156, 156);
+  background-color: var(--bg-btn);
+}
+
+.calc-buttons-container span:nth-of-type(4n),
+.calc-buttons-container span:last-child {
+  border-left: none;
+  background-color: var(--bg-orange);
+}
+
+.calc-buttons-container span:nth-child(17) {
+  flex-grow: 2;
 }
