@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import Home from '../components/Home';
+import Home from '../Components/Home';
 
 describe('Home', () => {
   it('renders a section with class "main-container"', () => {

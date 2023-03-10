@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Quote from '../Components/Quote';
+import Quote from '../Components/quote';
 
 describe('Quote', () => {
   let wrapper;
