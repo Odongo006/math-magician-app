@@ -1,12 +1,12 @@
-* {
-  margin: 0;
-  box-sizing: border-box;
-}
-
 :root {
   --bg-orange: rgb(250, 146, 72);
   --bg-gray: rgb(107, 107, 107);
   --bg-btn: rgb(209, 209, 209);
+}
+
+ul,
+li {
+  list-style-type: none;
 }
 
 body {
@@ -20,14 +20,86 @@ body {
   align-items: center;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Arial', sans-serif;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  width: 100%;
+  padding: 16px;
+  font-weight: bold;
+  border-bottom: 1px solid rgb(236, 232, 232);
+  box-shadow: 5px 5px 5px rgb(229, 234, 233);
+  font-size: 16px;
+}
+
+nav li a {
+  padding: 0 20px;
+  color: rgb(46, 132, 178);
+  border-right: 2px solid rgb(87, 90, 92);
+}
+
+nav li:last-child a {
+  border: none;
+}
+
+.title {
+  font: 600 2em 'Patrick Hand', cursive;
+  letter-spacing: 2px;
+  padding: 0 16px;
+}
+
+.title-home,
+.title-calculator {
+  font: 600 1.2em 'Poppins', cursive;
+  letter-spacing: 1px;
+  margin-bottom: 1.5em;
+  padding: 0 16px;
+}
+
+.title-calculator {
+  width: 30%;
+}
+
 .app-container {
   width: 480px;
   margin-top: 12%;
 }
 
+.main-container {
+  width: 100%;
+  padding: 7% 18px;
+}
+
+.calc-main-container {
+  display: flex;
+}
+
+.main-container p {
+  margin-bottom: 1.8rem;
+  font-size: 15px;
+  padding: 0 16px;
+}
+
+.quote-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
 .calculator-container {
   display: flex;
   flex-direction: column;
+  width: 70%;
+  margin-top: 8px;
 }
 
 .calc-buttons-container {
@@ -41,23 +113,24 @@ body {
   justify-content: flex-end;
   background-color: var(--bg-gray);
   padding: 1.3rem 0.4rem;
+  text-align: right;
 }
 
 .calc-button {
   cursor: pointer;
   text-align: center;
-  width: 120px;
+  width: 25%;
   padding: 18px;
   border: 1px ridge rgb(164, 156, 156);
   background-color: var(--bg-btn);
 }
 
-.calc-buttons-container span:nth-of-type(4n),
-.calc-buttons-container span:last-child {
+.calc-buttons-container button:nth-of-type(4n),
+.calc-buttons-container button:last-child {
   border-left: none;
   background-color: var(--bg-orange);
 }
 
-.calc-buttons-container span:nth-child(17) {
+.calc-buttons-container button:nth-child(17) {
   flex-grow: 2;
 }
